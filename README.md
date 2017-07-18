@@ -8,6 +8,10 @@ For this analysis, I will consider the 2016 airline delay data only, and my goal
 I have several hypotheses which I will evaluate throughout this presentation.
 
 **Goal:** *Given all of the airline data from 2016, can we predict delays?*
+I tried this using two methods:
+
+1. Regression on the departure delay.
+2. Classification above a 20 minute threshold (defined as a delay by most major airlines).
 
 I used the following data in my analysis.
 
@@ -21,7 +25,8 @@ I used the following data in my analysis.
 
 **Main Results:**
 
-![alt text][fig/roc_final.png]
+![alt text](fig/roc_final.png)
+
 
 
 
