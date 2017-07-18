@@ -36,9 +36,12 @@ We compare performance of multiple models with and without the additional data u
 
 **Original:** Only the Airline On-Time Performance Data.
 
-**Enhanced:** All of the data included in the above links, in addition to a customized Poisson variable.
+**Enhanced:** All of the data included in the above links, in addition to a customized Poisson variable. More precisely, I define two time dependent variables with Poisson priors given by:
+![alt text](fig/poisson_formula.png)
 
-$$\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)$$
+where the P represents a Poisson distribution with time dependent mean depending on the delay of the previous hour or day respectively.
+
+The hour variable (called **hourly_poisson** below) is seen to be the top variable for the Gradient Boosted Trees and second top variable for the Random Forest classifier. 
 
 Below we see a comparison of three different classification models for the original and enriched variable set. The best performance obtained was by the Random Forest Classifier with the enriched data set, which achieved an ROC of 0.76.
 
@@ -46,6 +49,15 @@ Below we see a comparison of three different classification models for the origi
 ![alt text](fig/roc_final.png)
 
 #### Variable Importances:
+
+The variables are explained further in the notebook (Processing Weather Data), but for the reader's convenience here are some descriptions.
+
+**Weather:** `PRCP`, `SNOW` and `WT03` are weather variables representing precipitation, snow and wind. 
+
+**Plane Model:** `model` and `issue_date` correspond to the make of the plane. 
+
+**Poisson Regression Time Series:** `poisson_hourly` and `poisson_daily` represent the variables I discussed briefly above.
+
 
 **Gradient Boosted Trees:**
 
