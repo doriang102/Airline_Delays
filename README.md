@@ -38,6 +38,8 @@ We compare performance of multiple models with and without the additional data u
 
 **Enhanced:** All of the data included in the above links, in addition to a customized Poisson variable.
 
+$\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)$
+
 Below we see a comparison of three different classification models for the original and enriched variable set. The best performance obtained was by the Random Forest Classifier with the enriched data set, which achieved an ROC of 0.76.
 
 
