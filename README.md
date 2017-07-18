@@ -2,6 +2,7 @@
 
 
 
+### Introduction
 
 For this analysis, I will consider the 2016 airline delay data only, and my goal will be to predict delays using this one year of data. 
 
@@ -15,21 +16,43 @@ I tried this using two methods:
 
 I used the following data in my analysis.
 
-**Data:**
+### Data sets:
 
-- Custom built Poisson regression model for capturing hourly and daily trends. 
-- The 2016 weather data obtained from [NOAA](https://www.ncdc.noaa.gov/).
-- Data regarding the age and model of the plane obtained from [stat-computing](http://stat-computing.org/dataexpo/2009/plane-data.csv).
-- The total capacity of the airport from which the airlplane is originating form [Wiki](https://en.m.wikipedia.org/wikiList_of_the_busiest_airports_in_the_United_States.)
-- USA Holidays.
+- [Airline On-Time Performance Data. RITA/BTS. Bureau of Transportation Statistics.]( https://www.transtats.bts.gov). 2016.
 
-**Main Results:**
+- [Local Climatological Data. National Centers for Environmental Information.]( https://www.ncdc.noaa.gov/cdo-web/datatools/lcd). 2016.
+
+- [Flight Standards Service — Civil Aviation Registry. Federal Aviation Administration.]( http://stat-computing.org/dataexpo/2009/plane-data.csv). 2009.
+
+- [Passenger Boardings at Commercial Service Airports. Federal Aviation Administration.] (https://www.faa.gov/airports/planning_capacity/passenger_allcargo_stats/passenger/media/cy14-commercial-service-enplanements.pdf). 2014.  
+
+*Caveats of above data:* Plane data is from 2009, but will have missing planes from 2010-2016. 
+
+###Main Results:
+
+#### Performance:
+
+We compare performance of multiple models with and without the additional data used above. More precisely, we define:
+
+**Original:** Only the Airline On-Time Performance Data.
+
+**Enhanced:** All of the data included in the above links, in addition to a customized Poisson variable.
+
+Below we see a comparison of three different classification models for the original and enriched variable set. The best performance obtained was by the Random Forest Classifier with the enriched data set, which achieved an ROC of 0.76.
+
 
 ![alt text](fig/roc_final.png)
 
+#### Variable Importances:
+
+**Gradient Boosted Trees:**
+
+![alt text](fig/gb_variables.png)
 
 
+**Random Forest:**
 
+![alt text](fig/rf_variables.png)
 
 
  
