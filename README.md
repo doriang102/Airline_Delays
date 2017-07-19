@@ -14,11 +14,12 @@ I tried this using two methods:
 1. Regression on the departure delay.
 2. Classification above a 20 minute threshold (defined as a delay by most major airlines).
 
+### Research Results
 A research paper written on the results is contained here:
 
 [Predicting Airline Delays: A Comparison of Models and Features](https://github.com/doriang102/Airline_Delays/blob/master/doc/airlines-copy-copy.pdf)
 
-
+### Analysis
 The analysis is done in four iPython notebooks:
 
 - 1) [Airline Delays Part I - Feature Analysis, Preparation and Processing](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20I%20-%20Feature%20Analysis%2C%20Preparation%20and%20Processing.ipynb)
