@@ -14,6 +14,25 @@ I tried this using two methods:
 1. Regression on the departure delay.
 2. Classification above a 20 minute threshold (defined as a delay by most major airlines).
 
+A research paper written on the results is contained here:
+
+[Predicting Airline Delays: A Comparison of Models and Features](https://github.com/doriang102/Airline_Delays/blob/master/doc/airlines-copy-copy.pdf)
+
+
+The analysis is done in four iPython notebooks:
+
+- 1) [Airline Delays Part I - Feature Analysis, Preparation and Processing](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20I%20-%20Feature%20Analysis%2C%20Preparation%20and%20Processing.ipynb)
+
+This notebook includes analysis of the features involved including exploratory analysis. It also includes merging of the data sets.
+
+- 2) [Airline Delays Part II - Time Series Analysis](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20II%20-%20Time%20Series%20Analysis.ipynb)
+
+This notebook includes analysis of the time series, and creation of the Poisson variables used.
+
+- 3) [Airline Delays Part III - Model performance before and after feature enrichment](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20III%20-%20Model%20performance%20before%20and%20after%20feature%20enrichment.ipynb)
+
+The final notebook includes the comparison of the models with and without the new features added below. 
+
 I used the following data in my analysis.
 
 ### Data sets:
