@@ -22,7 +22,11 @@ A research paper written on the results is contained here:
 ### Analysis
 The analysis is done in four iPython notebooks:
 
-- 1) [Airline Delays Part I - Feature Analysis, Preparation and Processing](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20I%20-%20Feature%20Analysis%2C%20Preparation%20and%20Processing.ipynb)
+- 1) [Airline Delays Part 0 - Processing of Weather Data](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Processing%20of%20Weather%20Data.ipynb)
+
+This notebook contains the processing of all of the weather data from 2016. 
+
+- 2) [Airline Delays Part I - Feature Analysis, Preparation and Processing](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20I%20-%20Feature%20Analysis%2C%20Preparation%20and%20Processing.ipynb)
 
 This notebook includes analysis of the features involved including exploratory analysis. It also includes merging of the data sets.
 
@@ -33,7 +37,7 @@ This notebook includes analysis of the time series, and creation of the Poisson 
 
 - 3) [Airline Delays Part III - Model performance before and after feature enrichment](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20III%20-%20Model%20performance%20before%20and%20after%20feature%20enrichment.ipynb)
 
-- 4) [Airline Delays Part IV - Processing of Weather Data](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Processing%20of%20Weather%20Data.ipynb)
+
 
 The final notebook includes the comparison of the models with and without the new features added below. 
 
