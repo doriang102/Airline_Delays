@@ -33,7 +33,7 @@ I tried this using two methods:
 ### Research Results
 A research paper written on the results is contained here:
 
-[Predicting Airline Delays: A Comparison of Models and Features](https://github.com/doriang102/Airline_Delays/blob/master/doc/airlines-copy-copy.pdf)
+[Predicting Airline Delays: A Comparison of Models and Features](https://github.com/doriang102/Airline_Delays/blob/master/doc/airlines_research.pdf)
 
 ### Analysis
 The analysis is done in four iPython notebooks:
