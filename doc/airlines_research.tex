@@ -60,7 +60,7 @@ Y^t = f( X_{t-1}) \textrm{ for } t > 0,
 
 where $t$ is measured in hours, $X_{t-1}$ represents any collection of features we know at time $t-1$ (ie. one hour before the flight) and $f$ is the model we wish to find. 
 We believe this is a reasonable assumption in making
-in app that would be used to predict delays - expecting to predict delays a day in advance would rely only on general trends of the airline and unreliable weather forecasts. To be more precise, $X_{t-1}$ represents:
+in app that would be used to predict delays - expecting to predict delays a day in advance would rely only on general trends of the airline and unreliable weather forecasts, and any probabilistic forecast wouldn't change weather or not an individual needs to be at the airport at the designated time. To be more precise, $X_{t-1}$ represents:
 \begin{itemize}
 \item Weather data \cite{weather}
 \item Plane data \cite{aviation}
@@ -72,10 +72,10 @@ We introduce two time relevant variables based on our exploratory analysis of th
 \begin{align} Y_t^{d} &\sim \mathcal{P}(\mu_t^m)\\
 Y_t^{h} &\sim \mathcal{P}(\mu_t^h)
 \end{align}
-where $\mu_t^d = \beta^d \cdot X_{t-1}^d$ and $\mu_t^h= \beta^h \cdot X_{t-1}^h$.
+where $\mu_t^d = \beta^d \cdot X_{t-1}^d$, $\mu_t^h= \beta^h \cdot X_{t-1}^h$ and $\mathcal{P}$ is a Poisson distribution. We justify this assumption in \cite{airline1} and develop the coefficients in \cite{airline2}.
 
 Our paper is outlined as follows. In Section \ref{sec:main} we discuss the main results of the models with enhanced (all features mentioned above)  and the original variables. We then discuss
-the most important features in Subsection \ref{subsec:feats}.
+the most important features in Subsection \ref{subsec:feats}. We then discuss our methodology in \ref{sub:methodology}.
 
 \section{Discussion of Main Results}
 \label{sec:main}
@@ -123,7 +123,7 @@ poisson\_hour and poisson\_day are as defined above, constructed in \cite{airlin
 \end{figure}
 
 
-\subsection{Methodology}
+\subsection{Methodology}\label{sub:methodology}
 
 We use Python for all of the data processing, and to deal with the very large amount of data (2450509 rows and over 1200 columns when categorical features are expanded), we use the h2o library which performs the model building and analysis in a paralelized way. The work is summarized
 in the following notebooks:
@@ -164,7 +164,7 @@ We see by using a wide variety of data sets , utilizing the seasonality of time 
 \bibitem{airline2} Dorian Goldman. {\em Airline Delays Part II - Time Series Analysis.ipynb } \url{https://github.com/doriang102/Airline_Delays/blob/master/analysis/}. 2017
 \bibitem{airline3} Dorian Goldman. {\em Airline Delays Part III - Model performance before and after feature enrichment } \url{https://github.com/doriang102/Airline_Delays/blob/master/analysis/}. 2017
 \bibitem{airline4} Dorian Goldman. {\em Processing of Weather Data} \url{https://github.com/doriang102/Airline_Delays/blob/master/analysis/}. 2017
-\bibitem{weather_readme} National Centers for Environmental Information. {\em README FILE FOR DAILY GLOBAL HISTORICAL CLIMATOLOGY NETWORK}\url{ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt}2016
+\bibitem{weather_readme} National Centers for Environmental Information. {\em Readme File For Daily Global Historical Climatology Network} \url{ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt}2016
 
   \end{thebibliography}
   
