@@ -14,6 +14,22 @@ I tried this using two methods:
 1. Regression on the departure delay.
 2. Classification above a 20 minute threshold (defined as a delay by most major airlines).
 
+
+### File Structure
+
+`analysis/`: The notebooks used for all of the data processing and analysis.
+
+`doc/`: The research paper and TeX file for the research paper.
+
+`fig/`: Figures generated used in the research paper.
+
+`json/`: JSON files used for processing some of the weather data.
+
+`data/`: All data sets used. Note this was not included on Github due to size constraints, but is available upon request.
+
+`src/`: Source files used for scraping weather data.
+
+
 ### Research Results
 A research paper written on the results is contained here:
 
