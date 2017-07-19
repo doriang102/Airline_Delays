@@ -44,7 +44,7 @@
 In this note, we compare different methodologies for predicting airline delays. We focus on all airline delays which are made publicly available on the website of
 The Bureau of Transportation Statistics \cite{ontime}. We compare different modeling methodologies including, classification and regression, before and after an enhanced set of features
 is introduced. The features which we add to provide supporting predictive accuracy are: weather data from the NOAA \cite{weather}, plane data from the Federal Aviation Administration \cite{aviation}, publicly available holiday data and data about the passenger traffic at USA airports \cite{boarding}. We find
-that all three of the above improve predictive performance for regression and classification, with features ranking in the top 10-15 most predictive for the nonlinear models. Motivated by an analysis of the time series, we also implement Poisson regression time series model to predict the mean delay on days and hours prior 
+that three of the above improve predictive performance for regression and classification, with features ranking in the top 10-15 most predictive for the nonlinear models. Motivated by an analysis of the time series, we also implement Poisson regression time series model to predict the mean delay on days and hours prior 
 to the day and hour respectively being evaluated. The performance is compared to the standard auto regressive time series model and shown to have significant improvements in the RMSE. The author conjectures that the ideal model would be a contextual Poisson regressive time series, but due to time constraints, this was not implemented. 
 \end{abstract}
 
