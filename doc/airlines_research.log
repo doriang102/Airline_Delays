@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 JUL 2017 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 JUL 2017 16:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -419,14 +419,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
 
-<../fig/roc_final.png, id=55, 599.841pt x 604.1772pt>
+<../fig/roc_final.png, id=56, 599.841pt x 604.1772pt>
 File: ../fig/roc_final.png Graphic file (type png)
 
 <use ../fig/roc_final.png>
 Package pdftex.def Info: ../fig/roc_final.png used on input line 105.
 (pdftex.def)             Requested size: 209.94748pt x 211.46518pt.
 
-<../fig/gb_variables.png, id=63, 456.7464pt x 328.8285pt>
+<../fig/gb_variables.png, id=64, 456.7464pt x 328.8285pt>
 File: ../fig/gb_variables.png Graphic file (type png)
 
 <use ../fig/gb_variables.png>
@@ -437,7 +437,7 @@ Package pdftex.def Info: ../fig/gb_variables.png used on input line 116.
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 119.
 
-<../fig/rf_variables.png, id=90, 469.0323pt x 328.8285pt>
+<../fig/rf_variables.png, id=92, 469.0323pt x 328.8285pt>
 File: ../fig/rf_variables.png Graphic file (type png)
 
 <use ../fig/rf_variables.png>
@@ -526,13 +526,13 @@ Package rerunfilecheck Info: File `airlines_research.out' has not changed.
 (rerunfilecheck)             Checksum: D77DA60CDE3B8138B7DE81B8E89B80AA;578.
  ) 
 Here is how much of TeX's memory you used:
- 7947 strings out of 493014
- 112459 string characters out of 6133351
- 221254 words of memory out of 5000000
- 11377 multiletter control sequences out of 15000+600000
+ 7950 strings out of 493014
+ 112487 string characters out of 6133351
+ 222254 words of memory out of 5000000
+ 11380 multiletter control sequences out of 15000+600000
  9866 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,28p,455b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,28p,550b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -545,10 +545,10 @@ live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on airlines_research.pdf (3 pages, 292514 bytes).
+Output written on airlines_research.pdf (3 pages, 292817 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 184 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  28 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
