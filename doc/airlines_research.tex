@@ -62,11 +62,11 @@ where $t$ is measured in hours, $X_{t-1}$ represents any collection of features 
 We believe this is a reasonable assumption in making
 in app that would be used to predict delays - expecting to predict delays a day in advance would rely only on general trends of the airline and unreliable weather forecasts. To be more precise, $X_{t-1}$ represents:
 \begin{itemize}
-\item Weather data
-\item Plane data
-\item Holiday data
-\item Airport capacity data.
-\item Time series data on the delays up to time t-1. 
+\item Weather data \cite{weather}
+\item Plane data \cite{aviation}
+\item Holiday data 
+\item Airport capacity data \cite{boarding}
+\item Time series data on the delays up to time t-1. \cite{airline2}
 \end{itemize}
 We introduce two time relevant variables based on our exploratory analysis of the distributions of the data each hour and each day. In particular, we consider 
 \begin{align} Y_t^{d} &\sim \mathcal{P}(\mu_t^m)\\
@@ -74,24 +74,17 @@ Y_t^{h} &\sim \mathcal{P}(\mu_t^h)
 \end{align}
 where $\mu_t^d = \beta^d \cdot X_{t-1}^d$ and $\mu_t^h= \beta^h \cdot X_{t-1}^h$.
 
-Our paper is outlined as follows. In Section \ref{sec} we discuss the main results of the models with enhanced (all features mentioned above)  and the original variables. We then discuss
-the most important features in Subsection \ref{}.
+Our paper is outlined as follows. In Section \ref{sec:main} we discuss the main results of the models with enhanced (all features mentioned above)  and the original variables. We then discuss
+the most important features in Subsection \ref{subsec:feats}.
 
 \section{Discussion of Main Results}
-\label{sec:examples}
-While the actual delays closely resemble a Tweedie distribution \cite{} (a Poisson distribution with a negative concentration), the means seem to closely resemble a Poisson distribution \cite{}.
-
-
-We also find that the poisson variable mentioned above occurs as the first or second variable in both nonlinear models compared, justifying the initial hypothesis that timely information 
-is essential for an accurate prediction. 
-
-
+\label{sec:main}
 
 \subsection{Performance}
 
 
 In this section we display the performance of the models compared. We find that including the features above, our performance improves the ROC by 7-8\% overall. In addition, at least one variable from each dataset above appears in the top 15
-features which are most predictive, indicating that each choice of data set did indeed have a meaningful contribution. The comparison of results is summarized in Table \ref{tab:widgets} and the ROC curves are plotted and compared in Figure \ref{fig:ROC}.
+features which are most predictive, indicating that each choice of data set did indeed have a meaningful contribution. The comparison of results is summarized in Table \ref{tab:widgets} and the ROC curves are plotted and compared in Figure \ref{fig:ROC}. With more time, the Gradient Boosted Classifier would most likely out perform the Random Forest model, but time wasn't spent on this due to time constraints. 
 
 \begin{table}
 \centering
@@ -114,9 +107,11 @@ Logistic Regr. (Original) & 0.65
 \end{figure}
 
 
-\subsection{Most Predictive Features}
+\subsection{Most Predictive Features}\label{subsec:feats}
 
-
+For the reader who wishes to see the feature importance plots for the models with original variables only, we refer to \cite{airline4}. For the enhanced models, we see that features from 4 out of 5 of our original
+data sets contribute to the top 15 features. Figure \ref{fig:GB} refers to the Gradient Boosted model and \ref{fig:RF} refers to the Random Forest model. The variables PRCP and SNOW refer respectively to precipitation and snow in mm per hour \cite{weather_readme}, model and issue\_date refer to details of the plane \cite{aviation} and
+poisson\_hour and poisson\_day are as defined above, constructed in \cite{airline2}. Finally Holiday.Name is the name of the holiday on any given day. 
 \begin{figure}
 \includegraphics[scale=0.5]{gb_variables}
 \caption{\label{fig:GB}GBT Variable Importances.}
@@ -130,9 +125,18 @@ Logistic Regr. (Original) & 0.65
 
 \subsection{Methodology}
 
+We use Python for all of the data processing, and to deal with the very large amount of data (2450509 rows and over 1200 columns when categorical features are expanded), we use the h2o library which performs the model building and analysis in a paralelized way. The work is summarized
+in the following notebooks:
+
 \begin{itemize}
-\item blah
+\item Airline Delays Part 0 - Processing of Weather Data  \cite{airline1}
+\item Airline Delays Part I - Feature Analysis, Preparation and Processing \cite{airline2}
+\item Airline Delays Part II - Time Series Analysis \cite{airline3}
+\item Airline Delays Part III - Model performance before and after feature enhancement \cite{airline4}
 \end{itemize}
+
+For the reader wishing to see the comparison of models, they can safely go to notebook \cite{airline4}. The variables poisson\_hour and poisson\_day are generated in \cite{airline3}. Feature analysis and EDA
+which motivate the feature creation and filter out nonsensical values is done in \cite{airline2}. 
 
 % Commands to include a figure:
 %\begin{figure}
@@ -144,6 +148,7 @@ Logistic Regr. (Original) & 0.65
 
 \section{Conclusion}
 
+We see by using a wide variety of data sets , utilizing the seasonality of time series and structure of the underlying distribution, we can improve the performance of the model by a significant amount.
 
 
 
@@ -159,6 +164,7 @@ Logistic Regr. (Original) & 0.65
 \bibitem{airline2} Dorian Goldman. {\em Airline Delays Part II - Time Series Analysis.ipynb } \url{https://github.com/doriang102/Airline_Delays/blob/master/analysis/}. 2017
 \bibitem{airline3} Dorian Goldman. {\em Airline Delays Part III - Model performance before and after feature enrichment } \url{https://github.com/doriang102/Airline_Delays/blob/master/analysis/}. 2017
 \bibitem{airline4} Dorian Goldman. {\em Processing of Weather Data} \url{https://github.com/doriang102/Airline_Delays/blob/master/analysis/}. 2017
+\bibitem{weather_readme} National Centers for Environmental Information. {\em README FILE FOR DAILY GLOBAL HISTORICAL CLIMATOLOGY NETWORK}\url{ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt}2016
 
   \end{thebibliography}
   

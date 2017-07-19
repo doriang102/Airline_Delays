@@ -51,7 +51,7 @@ This notebook includes analysis of the features involved including exploratory a
 This notebook includes analysis of the time series, and creation of the Poisson variables used.
 
 
-- 3) [Airline Delays Part III - Model performance before and after feature enrichment](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20III%20-%20Model%20performance%20before%20and%20after%20feature%20enrichment.ipynb)
+- 3) [Airline Delays Part III - Model performance before and after feature enhancement](https://github.com/doriang102/Airline_Delays/blob/master/analysis/Airline%20Delays%20Part%20III%20-%20Model%20performance%20before%20and%20after%20feature%20enrichment.ipynb)
 
 
 
